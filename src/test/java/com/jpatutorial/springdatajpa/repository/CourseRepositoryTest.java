@@ -19,7 +19,7 @@ class CourseRepositoryTest {
 
     @Autowired
     private CourseRepository repository;
-
+    /*
     @Test
     public void printCourses() {
         List<Course> courses = repository.findAll();
@@ -135,4 +135,5 @@ class CourseRepositoryTest {
 
         repository.save(course);
     }
+    */
 }

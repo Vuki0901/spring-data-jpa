@@ -17,6 +17,7 @@ class StudentRepositoryTest {
     @Autowired
     private StudentRepository studentRepository;
 
+    /*
     @Test
     public void saveStudent(){
         Student student = Student.builder()
@@ -102,4 +103,6 @@ class StudentRepositoryTest {
                 "shabbir@gmail.com"
         );
     }
+
+     */
 }

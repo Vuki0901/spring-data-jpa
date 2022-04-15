@@ -16,7 +16,7 @@ class TeacherRepositoryTest {
 
     @Autowired
     private TeacherRepository repository;
-
+    /*
     @Test
     public void saveTeacher(){
 
@@ -39,5 +39,7 @@ class TeacherRepositoryTest {
         repository.save(teacher);
 
     }
+
+     */
 
 }

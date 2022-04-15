@@ -16,6 +16,7 @@ class CourseMaterialRepositoryTest {
     @Autowired
     private CourseMaterialRepository repository;
 
+    /*
     @Test
     public void SaveCourseMaterial() {
 
@@ -40,5 +41,5 @@ class CourseMaterialRepositoryTest {
 
         System.out.println("courseMaterials = " + courseMaterials);
     }
-
+    */
 }

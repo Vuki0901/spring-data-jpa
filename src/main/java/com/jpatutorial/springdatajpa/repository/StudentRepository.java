@@ -14,14 +14,16 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
     List<Student> findByFirstName(String firstName);
+
     List<Student> findByFirstNameContaining(String name);
+
     List<Student> findByLastNameNotNull();
+
     List<Student> findByGuardianName(String guardianName);
 
     //JPQL
     @Query("select s.firstName from Student s where s.emailId = ?1")
     String getStudentByEmailAddress(String emailId);
-
 
 
     @Modifying
@@ -31,4 +33,18 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
             nativeQuery = true
     )
     int updateStudentNameByEmailId(String firstName, String emailId);
+
+    //UPDATE all student attributes
+    @Modifying
+    @Transactional
+    @Query(value = "update tbl_student set first_name = ?1, last_name = ?2, email_address = ?3, guardian_name = ?4, guardian_email = ?5, guardian_mobile = ?6 where student_id = ?7 ", nativeQuery = true)
+    void updateStudent(
+            String firstName,
+            String lastName,
+            String emailId,
+            String guardianName,
+            String guardianEmail,
+            String guardianMobile,
+            Long studentId
+    );
 }
